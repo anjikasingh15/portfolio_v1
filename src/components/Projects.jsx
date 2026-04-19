@@ -1,33 +1,35 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
 import { Github } from './Icons';
-import project1 from '../assets/project-1.png';
+import projectMarketplace from '../assets/project-marketplace.png';
+import projectAuction from '../assets/project-auction.png';
+import projectHeart from '../assets/project-heart.png';
 
 const Projects = () => {
   const projects = [
     {
-      title: 'E-Commerce Analytics Dashboard',
-      description: 'A comprehensive dashboard for tracking sales, inventory, and customer behavior with real-time data visualization.',
-      image: project1,
-      tech: ['React', 'Node.js', 'Chart.js', 'Tailwind'],
-      link: '#',
+      title: 'Marketplace Web App',
+      description: 'An on-demand home services marketplace similar to Urban Company, connecting users with professional service providers for maintenance, cleaning, and repairs.',
+      image: projectMarketplace,
+      tech: ['React', 'Laravel', 'MySQL', 'Tailwind'],
+      link: 'https://ezrainisrael.com',
       github: '#',
     },
     {
-      title: 'SaaS Landing Page',
-      description: 'A high-converting landing page for a SaaS startup, featuring glassmorphism and smooth scroll animations.',
-      image: project1, // Using same placeholder for now
-      tech: ['Next.js', 'Framer Motion', 'TypeScript'],
-      link: '#',
+      title: 'Machine Auction Platform',
+      description: 'A specialized auction system for industrial machines and recycling equipment, streamlining the bidding and transaction process.',
+      image: projectAuction,
+      tech: ['React', 'Laravel', 'MySQL', 'Node.js'],
+      link: 'https://101recycle.com',
       github: '#',
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative task management tool with drag-and-drop functionality and team workspace features.',
-      image: project1,
-      tech: ['React', 'Firebase', 'Redux'],
+      title: 'Heart Disease Prediction System',
+      description: 'A data science project that utilizes machine learning algorithms like Logistic Regression and Decision Trees to predict cardiovascular diseases.',
+      image: projectHeart,
+      tech: ['Python', 'Machine Learning', 'Data Analysis'],
       link: '#',
-      github: '#',
+      github: 'https://github.com/anjikasingh15/Cardiovascular-Disease-Prediction.git',
     },
   ];
 
@@ -49,12 +51,16 @@ const Projects = () => {
                   className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500"
                 />
                 <div className="absolute inset-0 bg-bg-color/60 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all">
-                  <a href={project.github} className="p-2 glass rounded-full hover:text-accent-primary">
-                    <Github size={20} />
-                  </a>
-                  <a href={project.link} className="p-2 glass rounded-full hover:text-accent-primary">
-                    <ExternalLink size={20} />
-                  </a>
+                  {project.github !== '#' && (
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className="p-2 glass rounded-full hover:text-accent-primary">
+                      <Github size={20} />
+                    </a>
+                  )}
+                  {project.link !== '#' && (
+                    <a href={project.link} target="_blank" rel="noopener noreferrer" className="p-2 glass rounded-full hover:text-accent-primary">
+                      <ExternalLink size={20} />
+                    </a>
+                  )}
                 </div>
               </div>
               

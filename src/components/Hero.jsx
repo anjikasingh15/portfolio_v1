@@ -31,7 +31,7 @@ const Hero = () => {
           </div>
 
           <div className="flex gap-6">
-            <a href="#" className="text-text-secondary hover:text-accent-primary">
+            <a href="https://github.com/anjikasingh15" target="_blank" rel="noopener noreferrer" className="text-text-secondary hover:text-accent-primary">
               <Github size={24} />
             </a>
             <a href="#" className="text-text-secondary hover:text-accent-primary">
