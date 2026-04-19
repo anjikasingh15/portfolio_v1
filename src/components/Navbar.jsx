@@ -26,7 +26,7 @@ const Navbar = () => {
       <div className="container flex justify-between items-center">
         <a href="#" className="flex items-center gap-2 text-xl font-bold">
           <Code2 className="text-accent-primary" />
-          <span className="text-gradient">Dev.Portfolio</span>
+          <span className="text-gradient">Anjika Singh</span>
         </a>
 
         {/* Desktop Menu */}
@@ -41,7 +41,7 @@ const Navbar = () => {
         </ul>
 
         {/* Mobile Menu Toggle */}
-        <button 
+        <button
           className="md:hidden text-text-primary"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
@@ -55,8 +55,8 @@ const Navbar = () => {
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.name}>
-                <a 
-                  href={link.href} 
+                <a
+                  href={link.href}
                   className="block text-lg font-medium"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >

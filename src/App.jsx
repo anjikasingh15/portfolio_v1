@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
+import Hero from './components/Hero_v2';
 import About from './components/About';
 import Experience from './components/Experience';
 import Skills from './components/Skills';
