@@ -3,6 +3,7 @@ import projectMarketplace from '../assets/project-marketplace.png';
 import projectAuction from '../assets/project-auction.png';
 import projectHeart from '../assets/project-heart.png';
 import project1 from '../assets/project-1.png';
+import TechOrbit from './TechOrbit';
 import '../hero.css';
 
 const Hero = () => {
@@ -33,21 +34,8 @@ const Hero = () => {
         </div>
 
         <div className="reveal active hidden md:block relative">
-          <div className="hero-visual-container">
-            <div className="hero-tilted-grid">
-              <div className="grid-card card-1">
-                <img src={projectMarketplace} alt="Project" />
-              </div>
-              <div className="grid-card card-2">
-                <img src={projectAuction} alt="Project" />
-              </div>
-              <div className="grid-card card-3">
-                <img src={projectHeart} alt="Project" />
-              </div>
-              <div className="grid-card card-4">
-                <img src={project1} alt="Project" />
-              </div>
-            </div>
+          <div className="hero-visual-container flex justify-center items-center">
+            <TechOrbit />
           </div>
         </div>
       </div>
