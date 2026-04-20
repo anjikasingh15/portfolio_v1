@@ -1,48 +1,98 @@
 import React from 'react';
-import { User, Target, Zap } from 'lucide-react';
+import { Monitor, Server, Globe, Code2, Rocket, Sparkles } from 'lucide-react';
+
 
 const About = () => {
+  const expertises = [
+    {
+      title: 'Website Development',
+      icon: <Monitor className="text-accent-primary" size={28} />,
+      desc: 'Building high-performance, responsive web applications.'
+    },
+    {
+      title: 'Backend Engineering',
+      icon: <Server className="text-accent-secondary" size={28} />,
+      desc: 'Developing robust server-side logic and scalable APIs.'
+    },
+    {
+      title: 'Website Hosting',
+      icon: <Globe className="text-white" size={28} />,
+      desc: 'Deploying and managing scalable cloud infrastructures.'
+    }
+  ];
+
+  const stats = [
+    { label: 'Completed Projects', value: '12+', color: 'text-accent-primary' },
+    { label: 'Client Satisfaction', value: '99%', color: 'text-accent-secondary' },
+    { label: 'Learning Journey', value: '1+', color: 'text-white' }
+  ];
+
   return (
-    <section id="about" className="reveal">
+    <section id="about" className="relative py-24 reveal overflow-hidden">
+      {/* Subtle Background Glow */}
+      <div className="absolute top-1/2 left-0 w-[500px] h-[500px] bg-accent-primary/5 blur-[120px] -z-10 rounded-full"></div>
+
       <div className="container">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">About Me</h2>
-          <div className="w-20 h-1 bg-gradient-to-r from-accent-primary to-accent-secondary mx-auto rounded-full"></div>
-        </div>
+        <div className="grid lg:grid-cols-2 gap-20 items-center">
 
-        <div className="grid md:grid-cols-2 gap-20 items-center">
-          <div className="glass p-8">
-            <h3 className="text-2xl font-bold mb-4 flex items-center gap-2">
-              <User className="text-accent-primary" /> My Journey
-            </h3>
-            <p className="text-text-secondary mb-6">
-              I am a dedicated Software Developer with 1 year of professional experience in 
-              building scalable web applications. My journey began with a deep curiosity 
-              for how things work on the internet, which led me to master the modern web stack.
-            </p>
-            <p className="text-text-secondary">
-              Over the past year, I've had the opportunity to work on diverse projects, 
-              from internal tools to customer-facing platforms, always prioritizing 
-              clean code and user-centric design.
-            </p>
+          {/* Left Column: Expertise */}
+          <div className="flex flex-col gap-4 order-2 lg:order-1">
+            {expertises.map((item, index) => (
+              <div
+                key={index}
+                className="glass p-6 flex items-center gap-8 group hover:bg-white/5 transition-all duration-300 border border-transparent hover:border-white/10"
+              >
+                <div className="flex-shrink-0 w-16 h-16 bg-white/5 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform">
+                  {item.icon}
+                </div>
+                <div>
+                  <h4 className="text-xl font-bold text-white mb-1">{item.title}</h4>
+                  <p className="text-text-secondary text-sm leading-relaxed">{item.desc}</p>
+                </div>
+              </div>
+            ))}
+
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-            <div className="glass p-6 hover:border-accent-primary transition-all">
-              <Target className="text-accent-primary mb-4" />
-              <h4 className="font-bold mb-2">My Mission</h4>
-              <p className="text-sm text-text-secondary">To build software that solves real-world problems effectively.</p>
+          {/* Right Column: About Content */}
+          <div className="order-1 lg:order-2">
+            <h2 className="text-5xl md:text-7xl font-black text-white mb-8 leading-[1.1]">
+              About <span className="text-gradient">me</span>
+            </h2>
+
+            <div className="space-y-6 text-text-secondary text-lg leading-relaxed mb-6">
+
+              <p>
+                I started my software journey with a passion for digital art and creation.
+                Through that, I learned to love the process of building things from scratch.
+              </p>
+              <p>
+                Since then, this has led me to software development as it fulfills my
+                love for continuous learning and problem-solving. I specialize in turning
+                complex requirements into elegant, high-performance digital solutions.
+              </p>
             </div>
-            <div className="glass p-6 hover:border-accent-secondary transition-all">
-              <Zap className="text-accent-secondary mb-4" />
-              <h4 className="font-bold mb-2">My Focus</h4>
-              <p className="text-sm text-text-secondary">Clean architecture, performance, and accessibility.</p>
+
+            {/* Stats Row */}
+            <div className="flex flex-row justify-between pt-10 border-t border-white/10">
+              {stats.map((stat, index) => (
+                <div key={index} className="flex flex-col gap-1">
+                  <span className={`text-3xl md:text-4xl font-black ${stat.color}`}>
+                    {stat.value}
+                  </span>
+                  <span className="text-[10px] uppercase tracking-wider text-text-secondary font-bold">
+                    {stat.label.split(' ').map((word, i) => <React.Fragment key={i}>{word}<br /></React.Fragment>)}
+                  </span>
+                </div>
+              ))}
             </div>
           </div>
+
         </div>
       </div>
     </section>
   );
 };
+
 
 export default About;
