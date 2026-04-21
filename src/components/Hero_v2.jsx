@@ -20,14 +20,11 @@ const Hero = () => {
           </h2>
           <h1 className="text-5xl md:text-8xl font-black mb-8 leading-[1.1] tracking-tight">
             <span className="text-accent-primary">Anjika Singh</span><br />
-            <span className="text-white">I am a Software Engineer</span>
+            {/* <span className="text-white">Building Robust Backend Systems</span> */}
           </h1>
           <p className="text-lg md:text-xl text-text-secondary mb-12 max-w-xl leading-relaxed">
-            <span className="font-bold text-text-primary">1+ years</span> of making the job done in the <span className="text-accent-primary font-bold">Tech industry</span>!<br />
-            I am a product-oriented Software Engineer with a business mindset
-            from bringing the latest tech to launching successful platforms!
+            I'm a Software Engineer specializing in the design and implementation of scalable backend architectures. Proficient in <span className="font-bold text-text-primary">Laravel, Node.js, and Express</span>, with a focus on delivering secure, high-performance systems and full-stack digital solutions.
           </p>
-
           <a href="#projects" className="btn btn-primary px-10 py-5 text-lg rounded-xl flex items-center gap-3 w-fit shadow-xl shadow-accent-primary/20 hover:scale-105 transition-transform">
             Lets Get Started!
           </a>

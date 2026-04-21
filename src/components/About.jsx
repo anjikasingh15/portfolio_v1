@@ -61,15 +61,11 @@ const About = () => {
             </h2>
 
             <div className="space-y-6 text-text-secondary text-lg leading-relaxed mb-6">
-
               <p>
-                I started my software journey with a passion for digital art and creation.
-                Through that, I learned to love the process of building things from scratch.
+                I am a results-driven <span className="text-white font-bold">Backend Engineer</span> focused on developing secure, scalable, and high-performance server-side architectures. My expertise lies in designing robust API infrastructures and optimizing complex database systems to meet enterprise-level requirements.
               </p>
               <p>
-                Since then, this has led me to software development as it fulfills my
-                love for continuous learning and problem-solving. I specialize in turning
-                complex requirements into elegant, high-performance digital solutions.
+                With a strong foundation in <span className="text-accent-primary font-bold">Laravel, Node.js, and Express</span>, I specialize in engineering efficient backend logic that ensures system reliability and performance. Additionally, I leverage my full-stack capabilities to facilitate seamless integration and deliver comprehensive, optimized digital solutions.
               </p>
             </div>
 
