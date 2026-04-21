@@ -45,9 +45,9 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div key={index} className="glass overflow-hidden group">
               <div className="relative overflow-hidden h-48">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
+                <img
+                  src={project.image}
+                  alt={project.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-all duration-500"
                 />
                 <div className="absolute inset-0 bg-bg-color/60 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-all">
@@ -63,7 +63,7 @@ const Projects = () => {
                   )}
                 </div>
               </div>
-              
+
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-3">{project.title}</h3>
                 <p className="text-text-secondary text-sm mb-6">{project.description}</p>
