@@ -248,6 +248,26 @@ button {
   }
 }
 
+.order-1 {
+  order: 1;
+}
+
+.order-2 {
+  order: 2;
+}
+
+.lg\:order-1 {
+  @media (min-width: 1024px) {
+    order: 1;
+  }
+}
+
+.lg\:order-2 {
+  @media (min-width: 1024px) {
+    order: 2;
+  }
+}
+
 .md\:gap-20 {
   @media (min-width: 768px) {
     gap: 5rem;
