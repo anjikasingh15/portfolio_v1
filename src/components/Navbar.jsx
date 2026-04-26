@@ -22,7 +22,10 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'glass py-3' : 'bg-transparent py-5'}`}>
+    <nav 
+      className={`fixed w-full z-50 transition-all duration-300 ${isScrolled ? 'glass py-3' : 'bg-transparent py-5'}`}
+      style={isScrolled ? { borderRadius: 0, borderTop: 'none', borderLeft: 'none', borderRight: 'none' } : {}}
+    >
       <div className="container flex justify-between items-center">
         <a href="#" className="flex items-center gap-2 text-xl font-bold">
           <Code2 className="text-accent-primary" />
@@ -51,7 +54,10 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden glass absolute top-full left-0 w-full p-4 mt-2 slide-in">
+        <div 
+          className="md:hidden absolute top-full left-0 w-full p-4 slide-in shadow-2xl" 
+          style={{ backgroundColor: 'var(--bg-color)', borderBottom: '1px solid var(--border)' }}
+        >
           <ul className="flex flex-col gap-4">
             {navLinks.map((link) => (
               <li key={link.name}>

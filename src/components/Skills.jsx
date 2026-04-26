@@ -210,25 +210,9 @@ const Skills = () => {
         </div>
 
         {/* Stats bar */}
-        <div style={{
-          display: 'flex',
-          justifyContent: 'center',
-          gap: '0',
-          background: 'rgba(15,23,42,0.6)',
-          border: '1px solid rgba(255,255,255,0.07)',
-          borderRadius: '1rem',
-          overflow: 'hidden',
-        }}>
+        <div className="stats-container">
           {stats.map((stat, i) => (
-            <div key={i} style={{
-              flex: 1,
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              gap: '0.6rem',
-              padding: '1.1rem 1rem',
-              borderRight: i < stats.length - 1 ? '1px solid rgba(255,255,255,0.07)' : 'none',
-            }}>
+            <div key={i} className="stat-item">
               <span style={{ color: 'var(--accent-primary)', opacity: 0.8 }}>{stat.icon}</span>
               <span style={{ fontWeight: 800, fontSize: '1.1rem', color: '#f8fafc' }}>{stat.value}</span>
               <span style={{ fontSize: '0.78rem', color: 'var(--text-secondary)', fontWeight: 500 }}>{stat.label}</span>
