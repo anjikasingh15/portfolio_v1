@@ -1,6 +1,7 @@
 import React, { useState, useRef } from 'react';
 import emailjs from '@emailjs/browser';
-import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader } from 'lucide-react';
+import { Github, Linkedin } from './Icons';
+import { Mail, Phone, MapPin, Send, CheckCircle, AlertCircle, Loader, ArrowUpRight } from 'lucide-react';
 
 // ─── Replace these with your EmailJS credentials ──────────────────────────────
 const EMAILJS_SERVICE_ID = 'service_jkotscu';   // e.g. 'service_abc123'
@@ -50,48 +51,79 @@ const Contact = () => {
 
         <div className="grid md:grid-cols-2 gap-12">
 
-          {/* ── Contact Info ── */}
-          <div className="glass p-8">
-            <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
-            <p className="text-text-secondary mb-8">
-              Open to new opportunities, collaborations, or technical discussions.
-              Feel free to reach out through any of the channels below.
-            </p>
+          {/* ── Contact Info & Socials ── */}
+          <div className="flex flex-col gap-6">
+            <div className="glass p-8">
+              <h3 className="text-2xl font-bold mb-6">Contact Information</h3>
+              <p className="text-text-secondary mb-8">
+                Open to new opportunities, collaborations, or technical discussions.
+                Feel free to reach out through any of the channels below.
+              </p>
 
-            <div className="flex flex-col gap-6">
-              <div className="flex items-center gap-4">
-                <div className="p-3 glass rounded-lg text-accent-primary">
-                  <Mail size={24} />
+              <div className="flex flex-col gap-6">
+                <div className="flex items-center gap-4">
+                  <div className="p-3 glass rounded-lg text-accent-primary">
+                    <Mail size={24} />
+                  </div>
+                  <div>
+                    <p className="text-sm text-text-secondary">Email</p>
+                    <a href="mailto:anjikasingh03@gmail.com" className="font-bold hover:text-accent-primary transition-all">
+                      anjikasingh03@gmail.com
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <p className="text-sm text-text-secondary">Email</p>
-                  <a href="mailto:anjikasingh03@gmail.com" className="font-bold hover:text-accent-primary transition-all">
-                    anjikasingh03@gmail.com
-                  </a>
+
+                <div className="flex items-center gap-4">
+                  <div className="p-3 glass rounded-lg text-accent-primary">
+                    <MapPin size={24} />
+                  </div>
+                  <div>
+                    <p className="text-sm text-text-secondary">Location</p>
+                    <p className="font-bold">Lucknow, Uttar Pradesh, India</p>
+                  </div>
                 </div>
               </div>
+            </div>
 
-              <div className="flex items-center gap-4">
-                <div className="p-3 glass rounded-lg text-accent-secondary">
-                  <Phone size={24} />
+            {/* Social Cards */}
+            <div className="grid grid-cols-2 gap-6">
+              {/* LinkedIn */}
+              <a
+                href="https://linkedin.com/in/anjika-singh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass flex items-center justify-center gap-3 hover:border-accent-primary transition-all group"
+                style={{ padding: '1.25rem 1rem' }}
+              >
+                <div className="text-[#0A66C2] group-hover:scale-110 transition-transform">
+                  <Linkedin size={28} />
                 </div>
                 <div>
-                  <p className="text-sm text-text-secondary">Phone</p>
-                  <a href="tel:+919918396738" className="font-bold hover:text-accent-secondary transition-all">
-                    +91 9918396738
-                  </a>
+                  <h4 className="font-bold text-sm" style={{ margin: 0 }}>LinkedIn</h4>
+                  <span className="text-text-secondary group-hover:text-accent-primary transition-colors flex items-center gap-1" style={{ fontSize: '0.8rem', marginTop: '0.25rem' }}>
+                    Profile <ArrowUpRight size={14} />
+                  </span>
                 </div>
-              </div>
+              </a>
 
-              <div className="flex items-center gap-4">
-                <div className="p-3 glass rounded-lg text-accent-primary">
-                  <MapPin size={24} />
+              {/* GitHub */}
+              <a
+                href="https://github.com/anjikasingh15"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="glass flex items-center justify-center gap-3 hover:border-accent-secondary transition-all group"
+                style={{ padding: '1.25rem 1rem' }}
+              >
+                <div className="text-white group-hover:scale-110 transition-transform">
+                  <Github size={28} />
                 </div>
                 <div>
-                  <p className="text-sm text-text-secondary">Location</p>
-                  <p className="font-bold">Lucknow, Uttar Pradesh</p>
+                  <h4 className="font-bold text-sm" style={{ margin: 0 }}>GitHub</h4>
+                  <span className="text-text-secondary group-hover:text-accent-secondary transition-colors flex items-center gap-1" style={{ fontSize: '0.8rem', marginTop: '0.25rem' }}>
+                    Profile <ArrowUpRight size={14} />
+                  </span>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
 
