@@ -4,11 +4,38 @@ import { Github } from './Icons';
 import projectMarketplace from '../assets/project-marketplace.png';
 import projectAuction from '../assets/project-auction.png';
 import projectHeart from '../assets/project-heart.png';
+import projectNexapersona from '../assets/project-nexapersona.png';
+import projectAnimovia from '../assets/project-animovia.png';
+import projectFynixo from '../assets/project-fynixo.png';
 
 const Projects = () => {
   const projects = [
     {
-      title: 'Marketplace Web App',
+      title: 'NexaPersona',
+      description: 'An AI influencer generation platform featuring high-fidelity image generation, automated video creation, synthetic voice cloning, and precise lip-sync technology.',
+      image: projectNexapersona,
+      tech: ['Next.js', 'NestJS', 'PostgreSQL', 'Tailwind'],
+      link: 'https://nexapersona.ai',
+      github: '#',
+    },
+    {
+      title: 'Animovia',
+      description: 'An AI-powered funny and realistic animal critter generator, creating humorous animal hybrids and avatars using advanced diffusion models.',
+      image: projectAnimovia,
+      tech: ['Next.js', 'Node.js', 'Express', 'PostgreSQL', 'Tailwind'],
+      link: 'https://animovia.ai',
+      github: '#',
+    },
+    {
+      title: 'Fynixo',
+      description: 'An all-in-one AI tools hub platform featuring text generators, image wizards, translation utilities, and code assistant APIs.',
+      image: projectFynixo,
+      tech: ['Next.js', 'Node.js', 'Express', 'PostgreSQL', 'OpenAI', 'FalAI', 'OpenRouter'],
+      link: 'https://fynixoai.com',
+      github: '#',
+    },
+    {
+      title: 'Ezra',
       description: 'An on-demand home services marketplace similar to Urban Company, connecting users with professional service providers for maintenance, cleaning, and repairs.',
       image: projectMarketplace,
       tech: ['React', 'Laravel', 'MySQL', 'Tailwind'],
@@ -16,11 +43,11 @@ const Projects = () => {
       github: '#',
     },
     {
-      title: 'Machine Auction Platform',
+      title: 'Greenbidz',
       description: 'A specialized auction system for industrial machines and recycling equipment, streamlining the bidding and transaction process.',
       image: projectAuction,
       tech: ['React', 'Laravel', 'MySQL', 'Node.js'],
-      link: 'https://101recycle.com',
+      link: 'https://101lab.co',
       github: '#',
     },
     {

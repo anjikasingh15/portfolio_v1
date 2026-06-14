@@ -24,7 +24,7 @@ const About = () => {
   const stats = [
     { label: 'Completed Projects', value: '12+', color: 'text-accent-primary' },
     { label: 'Client Satisfaction', value: '99%', color: 'text-accent-secondary' },
-    { label: 'Learning Journey', value: '1+', color: 'text-white' }
+    { label: 'Experience Years', value: '1+', color: 'text-white' }
   ];
 
   return (
@@ -62,10 +62,10 @@ const About = () => {
 
             <div className="space-y-6 text-text-secondary text-lg leading-relaxed mb-6">
               <p>
-                I am a results-driven <span className="text-white font-bold">Backend Engineer</span> focused on developing secure, scalable, and high-performance server-side architectures. My expertise lies in designing robust API infrastructures and optimizing complex database systems to meet enterprise-level requirements.
+                I am a results-driven <span className="text-white font-bold">Software Engineer</span> with <span className="text-accent-primary font-bold">over 1 year of professional experience</span> designing, building, and maintaining high-performance server-side architectures. My core focus lies in crafting secure, scalable API infrastructures and optimizing database systems to meet enterprise requirements.
               </p>
               <p>
-                With a strong foundation in <span className="text-accent-primary font-bold">Laravel, Node.js, and Express</span>, I specialize in engineering efficient backend logic that ensures system reliability and performance. Additionally, I leverage my full-stack capabilities to facilitate seamless integration and deliver comprehensive, optimized digital solutions.
+                Leveraging a strong technical foundation in <span className="text-white font-bold">Laravel, Node.js, and Express</span>, I specialize in engineering reliable backends that drive seamless application experiences. I am passionate about tackling complex backend challenges and delivering clean, maintainable, production-ready code.
               </p>
             </div>
 
